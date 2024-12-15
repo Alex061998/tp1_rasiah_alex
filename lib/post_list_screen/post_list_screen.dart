@@ -13,7 +13,7 @@ class PostListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Posts')),
+      appBar: AppBar(title: const Text('Posts')),
       body: BlocListener<PostBloc, PostState>(
         listener: (context, state) {
           if (state is PostLoaded) {
@@ -29,7 +29,7 @@ class PostListScreen extends StatelessWidget {
         child: BlocBuilder<PostBloc, PostState>(
           builder: (context, state) {
             if (state is PostLoading) {
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             } else if (state is PostLoaded) {
               if (state.posts.isEmpty) {
                 return const Center(child: Text('Aucun post disponible.'));
@@ -42,7 +42,7 @@ class PostListScreen extends StatelessWidget {
                     title: Text(post.title),
                     subtitle: Text(post.description),
                     trailing: IconButton(
-                      icon: Icon(Icons.delete, color: Colors.red),
+                      icon: const Icon(Icons.delete, color: Colors.red),
                       onPressed: () => _onRemoveFromList(context, post.id),
                     ),
                     onTap: () {

@@ -23,7 +23,7 @@ class _CreatePostPageState extends State<CreatePostPage> {
         description: _descriptionController.text,
       );
       context.read<PostBloc>().add(CreatePostEvent(newPost));
-      Navigator.pop(context); // Retourne à la liste des posts
+      Navigator.pop(context);
     }
   }
 
@@ -39,7 +39,7 @@ class _CreatePostPageState extends State<CreatePostPage> {
             children: [
               TextFormField(
                 controller: _titleController,
-                decoration: InputDecoration(labelText: "Title"),
+                decoration: const InputDecoration(labelText: "Title"),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return "Title cannot be empty";
@@ -47,10 +47,10 @@ class _CreatePostPageState extends State<CreatePostPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _descriptionController,
-                decoration: InputDecoration(labelText: "Description"),
+                decoration: const InputDecoration(labelText: "Description"),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return "Description cannot be empty";

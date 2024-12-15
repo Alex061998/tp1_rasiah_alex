@@ -58,7 +58,7 @@ class _PostDetailPageState extends State<PostDetailScreen> {
                   return null;
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _descriptionController,
                 decoration: InputDecoration(labelText: "Description"),
