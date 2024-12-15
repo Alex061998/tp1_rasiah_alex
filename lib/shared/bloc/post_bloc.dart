@@ -1,7 +1,7 @@
 
 import 'package:bloc/bloc.dart';
 
-import '../repository/post_repository.dart';
+import '../service/repository/post_repository.dart';
 import 'post_event.dart';
 import 'post_state.dart';
 

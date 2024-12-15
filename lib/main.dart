@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tp1_rasiah_alex/post_list_screen/post_list_screen.dart';
 import 'package:tp1_rasiah_alex/shared/bloc/post_bloc.dart';
 import 'package:tp1_rasiah_alex/shared/bloc/post_event.dart';
-import 'package:tp1_rasiah_alex/shared/datasource/post_servieces_data.dart';
-import 'package:tp1_rasiah_alex/shared/repository/post_repository.dart';
+import 'package:tp1_rasiah_alex/shared/service/datasource/post_servieces_data.dart';
+import 'package:tp1_rasiah_alex/shared/service/repository/post_repository.dart';
 
 
 void main() {
